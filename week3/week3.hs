@@ -58,11 +58,11 @@ type Vector = (Double, Double, Double)
 sumVectors :: Vector -> Vector ->Vector
 sumVectors (a, b, c) (x, y, z) = (a + x, b + y, c + z ) -- сбор на вектори
 
-scaleVector :: Vector -> Double -> Vector
-scaleVector (a, b, c) (x, y, z) = (a * x, b * y, c * z) -- умножени на вектор със скалар
+--scaleVector :: Vector -> Double -> Vector
+--scaleVector (a, b, c) (x, y, z) = (a * x, b * y, c * z) -- умножение на вектор със скалар
 
 dotVector :: Vector -> Vector -> Double
-dotVector (a, b, c) (x, y, z) = a * x + b * y + c * z --скаларно прозиведение на вектори
+dotVector (a, b, c) (x, y, z) = a * x + b * y + c * z --скаларно произведение на вектори
 
 --(a1,a2,a3) *(b1,b2,b3) = (a2*b3 - a3*b2, a3*b1 - a1*b3, a1*b2 - a2*b1)
 crossProduct :: Vector -> Vector -> Vector -- векторно произведение на вектори
@@ -77,5 +77,6 @@ main = do
     print (addPair (23, 77)) -- връща сбора
     print (sumVectors (1, 2, 3) (6, 5 , 4)) -- връща сбора на векторите 
     print (scaleVector(3, 3, 3) (1, 2, 3))  -- връща умножението на вектор със скалар
-    print (dotVector (1, 2, 3) (2, 3, 4)) -- връща скаларното произведени на вектори
+    print (dotVector (1, 2, 3) (2, 3, 4)) -- връща скаларното произведение на вектори
     print (crossProduct (1, 2, 3) (4, 4, 4)) -- връща векторното прозиведение на два вектора
+    
